@@ -17,11 +17,33 @@
 - O esquema eletrico foi feito no tinkercad para poder simular as cargas aproximadas do sistema.
 
 <div align="center">
-<img align="center" alt="mgn-python" height="500" width="900" src="https://user-images.githubusercontent.com/111460258/208561214-fc2bf783-3fd6-4b1d-9912-e0a4ca840985.png">
+
+  <a href="https://www.tinkercad.com/things/1YQovfJPuIY" target="_blank"><img height="500" width="900" src="https://user-images.githubusercontent.com/111460258/208561214-fc2bf783-3fd6-4b1d-9912-e0a4ca840985.png" target="_blank"></a>
+
 </div>
-<a href="https://www.tinkercad.com/things/1YQovfJPuIY">TinkerCad</a>.
 
 - Para controlar a fita de led WRGB, foi desenvolvido um script para poder controlar as cores da fita.
 
+```bash
+#include <Adafruit_NeoPixel.h>
+#define PIN 2 
+#define NUMPIXELS 20
 
+Adafruit_NeoPixel pixels = Adafruit_NeoPixel(NUMPIXELS, PIN, NEO_GRB + NEO_KHZ800);
+
+void setup()
+{
+  pixels.begin();
+  for(int i = 0; i <= NUMPIXELS; i++){
+      pixels.setPixelColor(i, pixels.Color(255, 0, 35));
+      pixels.show();
+      delay(10);
+   }
+}
+
+void loop()
+{
+  delay(1000);
+}
+```
  
