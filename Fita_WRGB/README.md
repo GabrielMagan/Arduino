@@ -22,7 +22,7 @@
 
 </div>
 
-- Para controlar a fita de led WRGB, foi desenvolvido um script para poder controlar as cores da fita.
+- Para controlar a fita de led WRGB, foi desenvolvido um script para poder alterar as cores da fita.
 
 ```bash
 #include <Adafruit_NeoPixel.h>
